@@ -1,0 +1,70 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+h1 {
+    color: #1e3a8a;
+    text-align: center;
+    font-weight: 700;
+    animation: fadeInDown 1s ease-in-out;
+}
+.input-section, .status-section, .process-table {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.input-section:hover, .status-section:hover, .process-table:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+.graph-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.graph-section {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.graph-section:hover {
+    transform: scale(1.02);
+}
+.graph {
+    height: 400px;
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+.input-section, .status-section, .graph-section, .process-table {
+    animation: slideIn 0.5s ease-in-out;
+}
+button:hover:not(:disabled) {
+    transform: scale(1.05);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
